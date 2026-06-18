@@ -1,6 +1,6 @@
 import json 
 
-File_name = 'Project3\\Data.json'
+File_name = 'Inventory.json'
 
 try:
     with open(File_name, "r") as f:
