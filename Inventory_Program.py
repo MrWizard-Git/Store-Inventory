@@ -59,26 +59,31 @@ def Delete_Product(data):
 
 
 while True:
-    print("To Add Product: Enter 1️⃣ ")
-    print("To View Products: Enter 2️⃣ ")
-    print("To Modify Product's Quantity: Enter 3️⃣ ")
-    print("To Delete Product: Enter 4️⃣ ")
-    print("To Exit: Enter 5️⃣")
+    print("\n------------- Inventory System -------------\n")
+    print("To Add New Product:            Enter 1️⃣ ")
+    print("To View Inventory:             Enter 2️⃣ ")
+    print("To Update Product Quantity:    Enter 3️⃣ ")
+    print("To Remove Product:             Enter 4️⃣ ")
+    print("To Exit Application:           Enter 5️⃣")
 
-    choice = int(input("Enter Command>>> "))
+    choice = input("\nEnter Command>>> ")
 
-    if choice == 1:
+    if choice == "1":
         Add_Product()
 
-    if choice == 2:
+    if choice == "2":
         view_Product(data)
 
-    if choice == 3:
+    if choice == "3":
         Modify_Quantity(data)
 
-    if choice == 4:
+    if choice == "4":
         Delete_Product(data)
 
-    elif choice == 5:
+    elif choice == "5":
+        print("\n>>> Inventory Management System Closed Successfully <<<\n")
         break
+    
+    else:
+        print("\n⚠️  Invalid Command!")
   
