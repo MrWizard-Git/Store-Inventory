@@ -32,7 +32,7 @@ def Add_Product():
 
 def view_Product(data):
     for i in data:
-        print(f"{i["Quantity"]} pics {i["Product"]} | Total= ₹{i["Total"]}\n")
+        print(f"📦 {i["Quantity"]} pics {i["Product"]} | Total= ₹{i["Total"]}\n")
 
 def Modify_Quantity(data):
     Modify_Product = input("[+] Enter Product Name which you want to modify: ")
@@ -66,24 +66,26 @@ while True:
     print("To Remove Product:             Enter 4️⃣ ")
     print("To Exit Application:           Enter 5️⃣")
 
-    choice = input("\nEnter Command>>> ")
+    choice = input("\n[o] Enter Command>>> ")
 
     if choice == "1":
+        print("\n➕ Adding new product...\n")
         Add_Product()
+        print("\nProduct Added ✅")
 
-    if choice == "2":
+    elif choice == "2":
+        print("\n=========== Inventory Storage ===========\n")
         view_Product(data)
 
-    if choice == "3":
+    elif choice == "3":
         Modify_Quantity(data)
 
-    if choice == "4":
+    elif choice == "4":
         Delete_Product(data)
 
     elif choice == "5":
         print("\n>>> Inventory Management System Closed Successfully <<<\n")
         break
-    
-    else:
-        print("\n⚠️  Invalid Command!")
+
+    else: print("\n⚠️  Invalid Command!")
   
