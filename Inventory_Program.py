@@ -57,6 +57,11 @@ def Delete_Product(data):
             print("Product Deleted.")
             break
 
+def Clear_Inventory():
+    with open(File_name, 'w') as f:
+        json.dump([], f, indent=4)  
+    print("\n🧹 Data cleared.")
+
 
 while True:
     print("\n------------- Inventory System -------------\n")
@@ -64,7 +69,8 @@ while True:
     print("To View Inventory:             Enter 2️⃣ ")
     print("To Update Product Quantity:    Enter 3️⃣ ")
     print("To Remove Product:             Enter 4️⃣ ")
-    print("To Exit Application:           Enter 5️⃣")
+    print("To Clear Inventory:            Enter 5️⃣ ")
+    print("To Exit Application:           Enter 6️⃣")
 
     choice = input("\n[o] Enter Command>>> ")
 
@@ -84,8 +90,10 @@ while True:
         Delete_Product(data)
 
     elif choice == "5":
+        Clear_Inventory()
+
+    elif choice == "6":
         print("\n>>> Inventory Management System Closed Successfully <<<\n")
         break
 
     else: print("\n⚠️  Invalid Command!")
-  
