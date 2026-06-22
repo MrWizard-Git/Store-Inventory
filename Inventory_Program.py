@@ -74,4 +74,26 @@ while True:
 
     choice = input("\n[o] Enter Command>>> ")
 
+    if choice == "1":
+        print("\n➕ Adding new product...\n")
+        Add_Product()
+        print("\nProduct Added ✅")
 
+    elif choice == "2":
+        print("\n=========== Inventory Storage ===========\n")
+        view_Product(data)
+
+    elif choice == "3":
+        Modify_Quantity(data)
+
+    elif choice == "4":
+        Delete_Product(data)
+
+    elif choice == "5":
+        Clear_Inventory()
+
+    elif choice == "6":
+        print("\n>>> Inventory Management System Closed Successfully <<<\n")
+        break
+
+    else: print("\n⚠️  Invalid Command!")
